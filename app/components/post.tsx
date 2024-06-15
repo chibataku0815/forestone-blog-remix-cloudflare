@@ -1,6 +1,5 @@
 import { Link } from "@remix-run/react";
-
-import type { PostMeta } from "~/.server/posts";
+import type { PostMeta } from "~/.server/getPosts";
 
 export const Post = ({ slug, frontmatter }: PostMeta) => {
 	return (

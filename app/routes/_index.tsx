@@ -1,6 +1,6 @@
 import { json, type MetaFunction } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
-import { getPosts } from "~/.server/posts";
+import { getPosts } from "~/.server/getPosts";
 import { Post } from "~/components/post";
 
 export const meta: MetaFunction = () => {

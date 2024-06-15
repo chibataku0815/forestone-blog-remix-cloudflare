@@ -14,9 +14,7 @@ export default defineConfig({
     tsconfigPaths(),
     mdx({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-      rehypePlugins: [
-        rehypePrettyCode,
-      ],
+      rehypePlugins: [rehypePrettyCode],
     }),
     remixCloudflareDevProxy(),
     remix({
