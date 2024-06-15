@@ -1,9 +1,8 @@
 // app/.server/posts.tsx
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import matter from "gray-matter";
 import { sortBy } from "lodash-es";
-
 export type Frontmatter = {
 	title: string;
 	description: string;

@@ -1,5 +1,5 @@
 // app/routes/blog.index.tsx
-import { json } from "@remix-run/node";
+import { json } from "@remix-run/cloudflare";
 import { useLoaderData } from "@remix-run/react";
 import { getPosts } from "~/.server/getPosts";
 import { Post } from "~/components/post";
