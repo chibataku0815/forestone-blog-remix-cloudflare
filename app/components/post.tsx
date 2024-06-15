@@ -12,7 +12,7 @@ export const Post = ({ slug, frontmatter }: PostMeta) => {
 				className="block text-sm text-cyan-700"
 				dateTime={frontmatter.published}
 			>
-				{frontmatter.published.replace(/-/g, "/")}
+				{frontmatter.published}
 			</time>
 		</article>
 	);

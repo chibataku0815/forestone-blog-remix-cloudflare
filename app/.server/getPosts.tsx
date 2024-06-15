@@ -16,6 +16,11 @@ export type PostMeta = {
 	frontmatter: Frontmatter;
 };
 
+/**
+ * Retrieves and sorts blog posts by their published date in descending order.
+ *
+ * @returns {Promise<PostMeta[]>} A promise that resolves to an array of post metadata.
+ */
 export const getPosts = async (): Promise<PostMeta[]> => {
 	const postsDirectory = path.join(process.cwd(), "posts");
 	const filenames = fs.readdirSync(postsDirectory);
@@ -27,8 +32,6 @@ export const getPosts = async (): Promise<PostMeta[]> => {
 
 		// Remove 'blog.' prefix from filename
 		const slug = filename.replace(/^blog\./, "").replace(/\.mdx$/, "");
-
-		console.log(slug);
 
 		return {
 			slug,
