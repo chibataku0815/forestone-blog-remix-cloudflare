@@ -4,10 +4,7 @@ import { getPosts } from "~/.server/getPosts";
 
 export const loader = async ({ params }: { params: { slug: string } }) => {
 	const posts = await getPosts();
-	console.log(params.slug);
-	// console.log(posts);
 	const post = posts.find((post) => post.slug === params.slug);
-	console.log(post);
 	return json(post);
 };
 

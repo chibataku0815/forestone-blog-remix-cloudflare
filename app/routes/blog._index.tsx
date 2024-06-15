@@ -8,7 +8,6 @@ export const loader = async () => json(await getPosts());
 
 export default function BlogLists() {
 	const posts = useLoaderData<typeof loader>();
-	console.log(posts);
 	return (
 		<div className="p-10">
 			<ul className="space-y-8">
