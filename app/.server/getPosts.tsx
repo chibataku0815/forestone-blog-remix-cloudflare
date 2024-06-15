@@ -14,6 +14,7 @@ export type Frontmatter = {
 export type PostMeta = {
 	slug: string;
 	frontmatter: Frontmatter;
+	content: string;
 };
 
 /**
@@ -22,7 +23,7 @@ export type PostMeta = {
  * @returns {Promise<PostMeta[]>} A promise that resolves to an array of post metadata.
  */
 export const getPosts = async (): Promise<PostMeta[]> => {
-	const postsDirectory = path.join(process.cwd(), "posts");
+	const postsDirectory = path.join(process.cwd(), "app/routes");
 	const filenames = fs.readdirSync(postsDirectory);
 
 	const posts = filenames.map((filename) => {
@@ -36,6 +37,7 @@ export const getPosts = async (): Promise<PostMeta[]> => {
 		return {
 			slug,
 			frontmatter: data as Frontmatter,
+			content: fileContents,
 		};
 	});
 
